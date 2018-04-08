@@ -1,9 +1,9 @@
 "use strict";
 
 const SIDE = 700;
-let bufferLength;
-let points;
-let colorOfPoints;
+let bufferLength = parseInt(prompt("Combien de points voulez vous créer par tour de boucle ?"));
+let points = new Array(bufferLength);
+let colorOfPoints = new Array(points.length);
 let centralPoint = new Point(SIDE/2, SIDE/2);
 
 let numberOfPoints = 0;
@@ -14,9 +14,6 @@ let pi;
 let valueContainer;
 
 function setup() {
-	bufferLength = prompt("Combien de points voulez vous créer par tour de boucle ?");
-	points = new Array(bufferLength);
-	colorOfPoints = new Array(points.length);
 	valueContainer = document.getElementById("valueContainer");
 	createCanvas(SIDE, SIDE);
 	background(255);
